@@ -19,3 +19,4 @@ public class GameSetup extends AppCompatActivity {
         startActivity(goToGame);
     }
 }
+
