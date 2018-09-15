@@ -1,6 +1,7 @@
 package pp2.fullsailuniversity.secondbuild;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -68,9 +69,9 @@ public class MainGameActivity extends AppCompatActivity implements GetTriviaJSON
         //new GetTriviaJSONData(this, "https://opentdb.com/api.php?amount=10&type=multiple").execute("testurl");
     
         GetTriviaJSONData getTriviaJSONData = new GetTriviaJSONData(this, "https://api.flickr.com/services/feeds/photos_public.gne");
-    
+
         getTriviaJSONData.execute("testURL");
-        
+
         startbtn.setOnClickListener(v -> {
             GameLoop(0);
             startbtn.setBackgroundColor(Color.RED);
@@ -78,8 +79,8 @@ public class MainGameActivity extends AppCompatActivity implements GetTriviaJSON
     
         exit.setOnClickListener((view) ->
         {
-            finish();
-            System.exit(0);
+            Intent goToMainMenu = new Intent(this,MainMenu.class);
+            startActivity(goToMainMenu);
         });
         
         Log.d(TAG, "onCreate: ends");
@@ -178,9 +179,9 @@ public class MainGameActivity extends AppCompatActivity implements GetTriviaJSON
                             GameLoop(i.get());
                         }
                         else{
-    
-                            finish();
-                            startActivity(getIntent());
+
+                            Intent goToMainMenu = new Intent(this,MainMenu.class);
+                            startActivity(goToMainMenu);
                         }
                     }
             );

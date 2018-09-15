@@ -35,7 +35,7 @@
     <string name="answer_2">answ_2</string>
     <string name="answer_4">answ_4</string>
     <string name="curr_question">curr_question</string>
-    <string name="exit">exit_B</string>
-    <string name="next">next_B</string>
+    <string name="exit">Main Menu</string>
+    <string name="next">Next</string>
     <string name="Score">Score:</string>
 </resources>
